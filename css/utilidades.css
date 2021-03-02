@@ -1,0 +1,18 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+@font-face {
+    src: url("../fonts/Indie_Flower/IndieFlower-Regular.ttf");
+    font-family: 'Indie_Flower';
+}
+
+@font-face {
+    src: url("../fonts/Permanent_Marker/PermanentMarker-Regular.ttf");
+    font-family: 'PermanentMarker';
+}
+
+@font-face {
+    src : url("../fonts/Reggae_One/ReggaeOne-Regular.ttf");
+    font-family: 'Reggae_One';
+}
