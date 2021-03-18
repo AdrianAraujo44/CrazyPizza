@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/utilidades.css">
   <link rel="stylesheet" href="css/quemSomos.css">
   <link rel="stylesheet" href="css/cardapio.css">
+  <link rel="stylesheet" href="css/feedbacks.css">
   <title>Pizzaria</title>
 </head>
 
@@ -38,7 +39,7 @@
             <a class="nav-link" href="#">Contatos</a>
           </li>
           <li class="nav-item">
-            <button type="button" class="btn btn-outline-light"><i class="fas fa-cart-plus"></i></button>
+            <a class="nav-link" href="#">Carrinho</a>
           </li>
         </ul>
       </div>
@@ -78,7 +79,7 @@
             suscipit, quaerat unde illum a accusantium facilis corrupti eos magni eius sequi, odit delectus, beatae
             libero! Esse, cupiditate ea!</p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" id="imgQuemSomos">
           <center><img src="img/pizzaiolo.png" alt="" class="img-fluid"></center>
         </div>
       </div>
@@ -105,7 +106,7 @@
             <div class="card-body text-center">
               <h5 class="card-title">Pizza de ... </h5>
               <p class="card-text">R$ 30</p>
-              <button type="button" class="btn btn-outline-light"><i class="fas fa-cart-plus"></i> Adicionar ao carrinho</button>
+              <button type="button" class="btn btn-lg btn-outline-light"><i class="fas fa-cart-plus"></i> Adicionar ao carrinho</button>
             </div>
           </div>
         </div>
@@ -115,7 +116,7 @@
             <div class="card-body text-center">
               <h5 class="card-title">Pizza de ...</h5>
               <p class="card-text">R$ 30</p>
-              <button type="button" class="btn btn-outline-light"><i class="fas fa-cart-plus"></i> Adicionar ao carrinho</button>
+              <button type="button" class="btn btn-lg btn-outline-light"><i class="fas fa-cart-plus"></i> Adicionar ao carrinho</button>
             </div>
           </div>
         </div>
@@ -125,7 +126,90 @@
             <div class="card-body text-center">
               <h5 class="card-title ">Pizza de ...</h5>
               <p class="card-text">R$ 30</p>
-              <button type="button" class="btn btn-outline-light"><i class="fas fa-cart-plus"></i> Adicionar ao carrinho</button>
+              <button type="button" class="btn btn-lg btn-outline-light"><i class="fas fa-cart-plus"></i> Adicionar ao carrinho</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <svg id = "waveCardapio" viewBox="0 0 1366 132" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path fill="#273036" 
+      d="M 0 0 C 347 0 347 110 694 110 L 694 110 L 694 0 L 0 0 Z" stroke-width="0">
+    </path> 
+    <path fill="#273036" d="M 693 110 C 1029.5 110 1029.5 2 1366 2 L 1366 2 L 1366 0 L 693 0 Z" stroke-width="0">
+    </path> 
+  </svg>
+  <section id="feedbacks">
+    <div class="text-center" style="margin-top:40px; margin-bottom:50px">
+      <h1 class="titulos">FeedBacks</h1>
+      <h2 class="subtitulos">"Conheça melhor o que alguns dos nossos clientes dizem"</h2>
+    </div>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-3">
+                  <img class="feedback-img rounded-circle" src="https://static1.preparadopravaler.com.br/articles/9/29/96/9/@/134642-uma-barba-que-nao-esteja-bem-aparada-ou-600x522-1.jpg" alt="">
+                </div>
+                <div class="col-9">
+                  <h5 class="card-title">Alex Pinheiro</h5>
+                  <div class="feedback-starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>              
+              <p class="comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-3">
+                  <img class="feedback-img rounded-circle" src="http://www.escoladeimagem.com.br/wp-content/uploads/download-1.jpeg" alt="">
+                </div>
+                <div class="col-9">
+                  <h5 class="card-title">Claudia Melo</h5>
+                  <div class="feedback-starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>              
+              <p class="comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-3">
+                  <img class="feedback-img rounded-circle" src="https://salaovirtual.org/wp-content/uploads/2016/10/corte-crespo-cacheado-rosto-redondo.jpg" alt="">
+                </div>
+                <div class="col-9">
+                  <h5 class="card-title">Sophia Oliveira</h5>
+                  <div class="feedback-starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>              
+              <p class="comentarios">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet </p>
             </div>
           </div>
         </div>

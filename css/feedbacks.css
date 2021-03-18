@@ -1,0 +1,14 @@
+.comentarios {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.feedback-img {
+    width: 50px;
+    height: 50px;
+}
+
+.feedback-starts {
+   color: rgb(233, 233, 17);
+}

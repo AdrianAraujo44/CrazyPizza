@@ -1,6 +1,7 @@
 #cardapio {
     margin-top: 65px;
     background-color: #273036;
+    position: relative;
 }
 #titulosCardapio {
     color: white;
@@ -16,4 +17,12 @@
     background-color: #273036;
     color: white;
     border: none;
+    margin-bottom: 20px;
+}
+
+.waveCardapio {
+    left: 0;
+    right: 0;
+    position:absolute;
+    margin-bottom: 0;
 }
