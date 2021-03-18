@@ -1,0 +1,14 @@
+.quemSomos {
+    margin-top: 60px;
+    position: relative;
+}
+#waveQuemSomos {
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: -70px;
+}
+#tituloQuemSomos {
+    align-items: center;
+    color: #fc5047;
+}

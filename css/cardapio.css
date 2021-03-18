@@ -1,0 +1,19 @@
+#cardapio {
+    margin-top: 65px;
+    background-color: #273036;
+}
+#titulosCardapio {
+    color: white;
+}
+#subtitulo-cardapio {
+    color: rgb(224, 221, 221);
+}
+.card-text {
+    font-size: 24px;
+}
+
+#cardapio .card {
+    background-color: #273036;
+    color: white;
+    border: none;
+}

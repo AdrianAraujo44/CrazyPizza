@@ -16,3 +16,22 @@ html,body{
     src : url("../fonts/Reggae_One/ReggaeOne-Regular.ttf");
     font-family: 'Reggae_One';
 }
+
+@font-face {
+    src : url("../fonts/Lora/Lora-Italic-VariableFont_wght.ttf");
+    font-family: 'lora';
+}
+
+.titulos {
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'Lora', serif;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0px;
+}
+.subtitulos {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 20px;
+}
