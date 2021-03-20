@@ -1,0 +1,28 @@
+#contatos {
+    margin-top: 100px; 
+    background-image: linear-gradient(to top,rgb(221, 215, 215) , white );
+}
+
+.texto-contatos {
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: bold ;
+}
+
+.icones-contatos{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* color: red; */
+    font-size: 15px;
+    padding-right: 15px;
+}
+
+#botao-contatos {
+    width: 100%;
+}
+
+.line {
+    width: 60%;
+    background-color: rgb(192, 192, 192);
+    height: 1px;
+}
