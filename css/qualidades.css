@@ -1,0 +1,17 @@
+.qualidades {
+    margin-top: 90px;
+    margin-bottom: 150px;
+}
+
+.qualidade-item {
+    color: #fc5047;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.qualidades > .container > .row > .col > h2 {
+    font-style: normal;
+    font-weight: 400;
+}
