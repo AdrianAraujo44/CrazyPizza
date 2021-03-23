@@ -12,18 +12,11 @@
 .icones-contatos{
     margin-top: 0px;
     margin-bottom: 30px;
-    color:  #fc5047;
+    color:  #dc3545;
     font-size: 20px;
     margin-right: 5px;
 }
 
 #botao-contatos {
     width: 100%;
-    background-color: #fc5047;
-}
-
-.line {
-    width: 60%;
-    background-color: rgb(192, 192, 192);
-    height: 1px;
 }
