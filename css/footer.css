@@ -1,0 +1,37 @@
+#footer {
+    background-color: #273036; 
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+#titulo-footer {
+    font-family: 'Reggae_One';
+    color:rgb(227, 231, 228);
+    font-size: 65px;
+    text-shadow: 2px 2px 2px white;
+    padding-top: 30px;
+}
+
+.icones-sociais-footer {
+    font-size: 30px;
+}
+
+.redes-sociais-footer {
+    color: white;
+    margin-top: 10px;
+}
+
+#creditos {
+    margin-top: 20px;
+    color: white;
+}
+#creditos a {
+    text-decoration: none;
+    border-bottom: solid white 1px;
+    color: white;
+}
+#titulo-footer {
+    font-size: 40px;
+}
+
