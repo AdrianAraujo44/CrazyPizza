@@ -1,37 +1,68 @@
 #footer {
-    background-color: #273036; 
+    background-color:#212529;/* #273036*/; 
     width: 100%;
     height: auto;
-    padding-bottom: 10px;
-}
-
-#titulo-footer {
-    font-family: 'Reggae_One';
-    color:rgb(227, 231, 228);
-    font-size: 65px;
-    text-shadow: 2px 2px 2px white;
-    padding-top: 30px;
-}
-
-.icones-sociais-footer {
-    font-size: 30px;
-}
-
-.redes-sociais-footer {
+    padding: 0 10px 0 10px;
     color: white;
-    margin-top: 10px;
+    margin-top: 60px;
+}
+
+#footer >.container-fluid {
+    padding: 20px;
+}
+
+.icones-footer{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color:  #a09596;
+    font-size: 20px;
+    margin-right: 5px; 
+    border: 1px solid #232b30;
+    padding: 10px;
+    border-radius: 50%;
+    background-color:  #232b30 ;
+} 
+
+.icones-footer:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+#descricao-siga-nos {
+    text-align: justify;
+    font-size: 1.0625rem; 
+}
+
+.titulos-footer {
+    padding: 20px;
+    border-bottom: 1px solid #232b30;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#icones-siga-nos {
+    margin-top: 55px;
+}
+
+.item-icones-endereco {
+    margin-bottom: 30px;
+}
+
+#footer input, #footer textarea {
+    background-color:#232b30;
+    border-color: #212529;
+    color: white;
+}
+
+#botao-enviar-footer {
+    width: 100%;
 }
 
 #creditos {
-    margin-top: 20px;
-    color: white;
-}
-#creditos a {
-    text-decoration: none;
-    border-bottom: solid white 1px;
-    color: white;
-}
-#titulo-footer {
-    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 5px;
 }
 
+#creditos a {
+    color: #dc3545;
+}
