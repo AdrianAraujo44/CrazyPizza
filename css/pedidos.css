@@ -19,5 +19,5 @@
 }
 #pizza-form button {
     padding: .8rem 1rem;
-    float: right;
+    width: 100%;
 }
