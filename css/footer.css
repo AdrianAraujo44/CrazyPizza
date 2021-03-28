@@ -4,7 +4,7 @@
     height: auto;
     padding: 0 10px 0 10px;
     color: white;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 #footer >.container-fluid {
@@ -41,14 +41,14 @@
 }
 
 #icones-siga-nos {
-    margin-top: 55px;
+    margin-top: 5px;
 }
 
 .item-icones-endereco {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
-#footer input, #footer textarea {
+#footer input {
     background-color:#232b30;
     border-color: #212529;
     color: white;
@@ -66,3 +66,4 @@
 #creditos a {
     color: #dc3545;
 }
+ 
