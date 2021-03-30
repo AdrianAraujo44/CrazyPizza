@@ -20,6 +20,15 @@
     margin-bottom: 50px;
 }
 
+#cardapio .card-img-top {
+    border-radius: 50%;
+    background-color:#273036;
+}
+
+#cardapio .card-img-top:hover {
+    cursor: pointer;
+}
+
 .waveCardapio {
     left: 0;
     right: 0;
