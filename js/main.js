@@ -1,5 +1,5 @@
 import { pizzas } from "./pizzas.js";
-import {addCarrinho, realizarPedido} from "./pedido.js"
+import {addCarrinho} from "./pedido.js"
 
 let modalPedido = document.getElementById('fazerPedido')
 let addCarrinhoBtn = document.getElementById("addCarrinhoBtn")

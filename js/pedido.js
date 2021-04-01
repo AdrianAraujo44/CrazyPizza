@@ -1,4 +1,5 @@
-import {pizzas} from "./pizzas.js"
+import { pizzas } from "./pizzas.js"
+
 let carrinho = new Array;
 
 export function addCarrinho() {
@@ -7,11 +8,16 @@ export function addCarrinho() {
     const selectBorda = document.getElementById("bordaPizza")
     let quantidade = document.getElementById("quantidadePizza").value
 
+    let sabor =  selectSabor.options[selectSabor.selectedIndex].value
+    let tamanho =  selectTamanho.options[selectTamanho.selectedIndex].value
+    let borda =  selectBorda.options[selectBorda.selectedIndex].value
+
     const pizza = {
-        sabor: selectSabor.options[selectSabor.selectedIndex].value,
-        tamanho: selectTamanho.options[selectTamanho.selectedIndex].value,
-        borda: selectBorda.options[selectBorda.selectedIndex].value,
-        quantidade: quantidade
+        sabor,
+        tamanho,
+        borda,
+        quantidade,
+        preco : calcularPreco(sabor,tamanho,borda)
     }
     carrinho.push(pizza)
     console.log(carrinho)
@@ -20,71 +26,123 @@ export function addCarrinho() {
 
 function criarTabela() {
     let body = document.getElementById("bodytabelaPedidos")
-    let tabela = document.getElementById("tabela-de-pedidos")
-    body.innerHTML = ''
-    let numprecoU,numprecoT,numQuantidade
+    let tabela = document.getElementById("tabela-de-pedidos") 
+    let textoSabor, textoTamanho, textoPrecoU,textoBorda
+
     tabela.style.display = "block";
+    body.innerHTML = ''
+
     for (let indexCarrinho in carrinho) {
-        //criar elementos 
+        //criando elementos 
         let linha = document.createElement("tr")
         let campoSabor = document.createElement("td")
         let campoTamanho = document.createElement("td")
         let campoBorda = document.createElement("td")
         let campoQuantidade = document.createElement("td")
         let campoPrecoU = document.createElement("td")
-        let campoPrecoT = document.createElement("td")
-        let botoes = document.createElement("button")
+        let campoBotao = document.createElement("td")
+
         //criando nós 
-        let textoSabor
-        let textoTamanho
-        let textoPrecoU 
-        let textoBorda
         for (let indexSabores in pizzas.sabores) {
-            if(indexSabores == carrinho[indexCarrinho].sabor ) {
+            if (indexSabores == carrinho[indexCarrinho].sabor) {
                 textoSabor = document.createTextNode(pizzas.sabores[indexSabores].nome)
             }
         }
-        if(carrinho[indexCarrinho].tamanho == "P") {
-            numprecoU = pizzas.sabores[indexCarrinho].precoP
-            textoPrecoU = document.createTextNode(numprecoU)
-            textoTamanho =  document.createTextNode("Pequeno") 
+        if (carrinho[indexCarrinho].tamanho == "P") { 
+            
+            textoTamanho = document.createTextNode("Pequeno")
         }
-        if(carrinho[indexCarrinho].tamanho == "M") {
-            numprecoU = pizzas.sabores[indexCarrinho].precoM
-            textoPrecoU = document.createTextNode(numprecoU)
-            textoTamanho =  document.createTextNode("Médio") 
+        if (carrinho[indexCarrinho].tamanho == "M") { 
+            textoTamanho = document.createTextNode("Médio")
         }
-        if(carrinho[indexCarrinho].tamanho == "G") {
-            numprecoU = pizzas.sabores[indexCarrinho].precoG
-            textoPrecoU = document.createTextNode(numprecoU)
-            textoTamanho =  document.createTextNode("Grande") 
+        if (carrinho[indexCarrinho].tamanho == "G") { 
+            textoTamanho = document.createTextNode("Grande")
         }
-        for(let indexBorda in pizzas.borda) {
-            if(indexBorda == carrinho[indexCarrinho].borda) {
+        for (let indexBorda in pizzas.borda) {
+            if (indexBorda == carrinho[indexCarrinho].borda) {
                 textoBorda = document.createTextNode(pizzas.borda[indexBorda].nome)
             }
-        }
-        numprecoT = parseFloat((numprecoU  * carrinho[indexCarrinho].quantidade).toFixed(2))
+        } 
         let textoQuantidade = document.createTextNode(carrinho[indexCarrinho].quantidade)
-        let textoPrecoT = document.createTextNode(numprecoT)
+        let textoPrecoU = document.createTextNode(`R$ ${carrinho[indexCarrinho].preco.toFixed(2)}`)
+        let botoes = document.createElement("button")
+        let icone = document.createElement("i")
+
+        //aplicando estilos
+        botoes.classList.add("btn", "btn-sm",  "btn-danger")
+        icone.classList.add("fas", "fa-times")
+
+        //adicionando value
+        botoes.setAttribute("value",indexCarrinho)
+
+        //adiciondo evento
+        botoes.addEventListener("click",(e) => {
+            excluirItemCarrinho(tabela,body,botoes.value,)
+            e.preventDefault()
+        })
+
         //vinculando nós aos elementos 
         campoSabor.appendChild(textoSabor)
         campoTamanho.appendChild(textoTamanho)
         campoBorda.appendChild(textoBorda)
         campoQuantidade.appendChild(textoQuantidade)
         campoPrecoU.appendChild(textoPrecoU)
-        campoPrecoT.appendChild(textoPrecoT)
+        botoes.appendChild(icone)
+        campoBotao.appendChild(botoes)
 
         linha.appendChild(campoSabor)
         linha.appendChild(campoTamanho)
         linha.appendChild(campoBorda)
         linha.appendChild(campoQuantidade)
         linha.appendChild(campoPrecoU)
-        linha.appendChild(campoPrecoT)
+        linha.appendChild(campoBotao)
 
         //vinculand os elementos ao document
         body.appendChild(linha)
     }
+    valorTotal()
+}
+
+function excluirItemCarrinho(tabela,body,index) {
+    carrinho.splice(index,1)
+    if(body.childElementCount == 1) {
+        let precoTotal = document.getElementById("preco-total");
+        precoTotal.style.display = "none"
+        tabela.style.display = "none" 
+    }else {
+        criarTabela()
+     }
+}
+
+//calcula todos os preços de carrinho
+function valorTotal() {
+    let pagar = document.getElementById("preco-total")
+    let valorTotal = 0
+
+    for(let index in carrinho) {
+        valorTotal = valorTotal + carrinho[index].preco * carrinho[index].quantidade
+    }
+
+    pagar.innerHTML = ` Total : R$ ${valorTotal.toFixed(2)}`
+    pagar.style.display= "block" 
+}
+
+//calcula o preço unitario de cada pizza com borda e tamanho
+function calcularPreco(indexSabor,indexTamanho,indexBorda) {
+    const {sabores,borda}  = pizzas
+    let preco
+    if(indexTamanho == 'P') {
+        preco = sabores[indexSabor].precoP
+    }
+    if(indexTamanho == 'M') {
+        preco = sabores[indexSabor].precoM
+    }
+    if(indexTamanho == 'G') {
+        preco = sabores[indexSabor].precoG
+    }
+    preco = preco + borda[indexBorda].preco
+    console.log(`preco: ${preco}`);
+    return preco
 }
 
 export function realizarPedido() {

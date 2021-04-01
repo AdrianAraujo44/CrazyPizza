@@ -97,27 +97,27 @@
         },
         {
             nome: "Requeijão",
-            preco: 10
+            preco: 2
         },
         {
             nome: "Mista (requeijão e Cheddar)",
-            preco: 10
+            preco: 3
         },
         {
             nome: "Gergelim",
-            preco: 10
+            preco: 2
         },
         {
             nome: "Catupiry",
-            preco: 10
+            preco: 5
         },
         {
             nome: "Marguerida",
-            preco: 10
+            preco: 3
         },
         {
             nome: "Brigadeiro",
-            preco: 10
+            preco: 5
         }
     ]
 }
