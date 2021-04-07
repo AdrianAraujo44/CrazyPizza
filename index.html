@@ -422,7 +422,7 @@
                     </div>
                     <div class="col-6">
                       <div class="mb-3">
-                        <input type="text" class="form-control" id="telefoneCliente" placeholder="Telefone" required>
+                        <input type="text" class="form-control" maxlength="15" onblur="formatarTelefone(this)" id="telefoneCliente" placeholder="Telefone">
                         <div class="invalid-feedback">
                           O campo não pode estar vazio.
                         </div>
@@ -440,7 +440,7 @@
                     </div>
                     <div class="col-6">
                       <div class="mb-3">
-                        <input type="text" class="form-control" id="numeroCliente" placeholder="Número" required>
+                        <input type="text" class="form-control" id="numeroCliente" placeholder="Número">
                         <div class="invalid-feedback">
                           O campo não pode estar vazio.
                         </div>
@@ -458,7 +458,7 @@
                     </div>
                     <div class="col-6">
                       <div class="mb-3">
-                        <input type="text" class="form-control" id="cepCliente" placeholder="CEP" required>
+                        <input type="text" class="form-control" maxlength="9" onblur="formatarCEP(this)" id="cepCliente" placeholder="CEP" required>
                         <div class="invalid-feedback">
                           O campo não pode estar vazio.
                         </div>
@@ -556,5 +556,6 @@
   </script>
   <script src="js/menu.js"></script>
   <script src="js/main.js" type="module"></script>
+  <script src="js/mascaras.js"></script>
 </body>
 </html>

@@ -47,6 +47,3 @@ function popularSelects(selectSabor,selectTamanho,selectBorda) {
     }
     selectTamanho.selectedIndex = "1"
 }
-
-
-

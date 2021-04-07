@@ -27,7 +27,7 @@ export function addCarrinho() {
 function criarTabela() {
     let body = document.getElementById("bodytabelaPedidos")
     let tabela = document.getElementById("tabela-de-pedidos") 
-    let textoSabor, textoTamanho, textoPrecoU,textoBorda
+    let textoSabor, textoTamanho,textoBorda
 
     tabela.style.display = "block";
     body.innerHTML = ''
@@ -64,7 +64,7 @@ function criarTabela() {
             }
         } 
         let textoQuantidade = document.createTextNode(carrinho[indexCarrinho].quantidade)
-        let textoPrecoU = document.createTextNode(`R$ ${carrinho[indexCarrinho].preco.toFixed(2)}`)
+        let textoPreco = document.createTextNode(`R$ ${(carrinho[indexCarrinho].preco * carrinho[indexCarrinho].quantidade).toFixed(2)}`)
         let botoes = document.createElement("button")
         let icone = document.createElement("i")
 
@@ -86,7 +86,7 @@ function criarTabela() {
         campoTamanho.appendChild(textoTamanho)
         campoBorda.appendChild(textoBorda)
         campoQuantidade.appendChild(textoQuantidade)
-        campoPrecoU.appendChild(textoPrecoU)
+        campoPrecoU.appendChild(textoPreco)
         botoes.appendChild(icone)
         campoBotao.appendChild(botoes)
 
@@ -141,7 +141,6 @@ function calcularPreco(indexSabor,indexTamanho,indexBorda) {
         preco = sabores[indexSabor].precoG
     }
     preco = preco + borda[indexBorda].preco
-    console.log(`preco: ${preco}`);
     return preco
 }
 
