@@ -422,7 +422,7 @@
                     </div>
                     <div class="col-6">
                       <div class="mb-3">
-                        <input type="text" class="form-control" maxlength="15" onblur="formatarTelefone(this)" id="telefoneCliente" placeholder="Telefone">
+                        <input type="text" class="form-control" maxlength="15" onkeypress="return apenasNumeros()" onblur="formatarTelefone(this)" id="telefoneCliente" placeholder="Telefone">
                         <div class="invalid-feedback">
                           O campo não pode estar vazio.
                         </div>
@@ -458,7 +458,7 @@
                     </div>
                     <div class="col-6">
                       <div class="mb-3">
-                        <input type="text" class="form-control" maxlength="9" onblur="formatarCEP(this)" id="cepCliente" placeholder="CEP" required>
+                        <input type="text" class="form-control" maxlength="9" onkeypress="return apenasNumeros();" onblur="formatarCEP(this)" id="cepCliente" placeholder="CEP" required>
                         <div class="invalid-feedback">
                           O campo não pode estar vazio.
                         </div>
