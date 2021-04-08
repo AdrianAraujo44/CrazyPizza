@@ -179,4 +179,5 @@ export function realizarPedido() {
         pizzas: carrinho
     }
     console.log( pedido)
+    alert("Pedido Realizado com sucesso")
 }
