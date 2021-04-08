@@ -396,7 +396,7 @@
   </section>
 
   <!-- modal de pedidos -->
-  <form>
+  <form id="formPedidos">
     <div class="modal " id="fazerPedido" tabindex="-1">
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
@@ -408,24 +408,19 @@
           <div class="modal-body">
             <div class="container">
               <div class="row">
+                <div class="alert alert-danger text-center" id="mensagemValidacao" role="alert"></div>
                 <h2 class="subtitulos-pedidos">Dados Pessoais</h2>
                 <div class="col-12">
                   <div class="row">
                     <div class="col-6">
                       <div class="mb-3">
                         <input type="text" class="form-control" id="nomeCliente" placeholder="Nome" required>
-                        <div class="invalid-feedback">
-                          O campo não pode estar vazio.
-                        </div>
                       </div>
 
                     </div>
                     <div class="col-6">
                       <div class="mb-3">
-                        <input type="text" class="form-control" maxlength="15" onkeypress="return apenasNumeros()" onblur="formatarTelefone(this)" id="telefoneCliente" placeholder="Telefone">
-                        <div class="invalid-feedback">
-                          O campo não pode estar vazio.
-                        </div>
+                        <input type="text" class="form-control" maxlength="10" onkeypress="return apenasNumeros()" onblur="formatarTelefone(this)" id="telefoneCliente" placeholder="Telefone">
                       </div>
                     </div>
                   </div>
@@ -433,17 +428,11 @@
                     <div class="col-6">
                       <div class="mb-3">
                         <input type="text" class="form-control" id="enderecoCliente" placeholder="Endereço" required>
-                        <div class="invalid-feedback">
-                          O campo não pode estar vazio.
-                        </div>
                       </div>
                     </div>
                     <div class="col-6">
                       <div class="mb-3">
                         <input type="text" class="form-control" id="numeroCliente" placeholder="Número">
-                        <div class="invalid-feedback">
-                          O campo não pode estar vazio.
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -451,17 +440,11 @@
                     <div class="col-6">
                       <div class="mb-3">
                         <input type="text" class="form-control" id="bairroCliente" placeholder="Bairro" required>
-                        <div class="invalid-feedback">
-                          O campo não pode estar vazio.
-                        </div>
                       </div>
                     </div>
                     <div class="col-6">
                       <div class="mb-3">
                         <input type="text" class="form-control" maxlength="9" onkeypress="return apenasNumeros();" onblur="formatarCEP(this)" id="cepCliente" placeholder="CEP" required>
-                        <div class="invalid-feedback">
-                          O campo não pode estar vazio.
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -544,7 +527,7 @@
           </div>
           <div class="modal-footer">
             <span id="preco-total"></span>
-            <button type="button" class="btn btn-danger">Realizar Pedido</button>
+            <button type="button" id="realizarPedido" class="btn btn-danger">Realizar Pedido</button>
           </div>
         </div>
       </div>
