@@ -20,8 +20,8 @@ export function addCarrinho() {
             borda,
             quantidade,
             preco : calcularPreco(sabor,tamanho,borda)
-        }
-        carrinho.push(pizza) 
+        } 
+        addPizzas(pizza) 
         criarTabela();
     }
 }
@@ -144,6 +144,19 @@ function calcularPreco(indexSabor,indexTamanho,indexBorda) {
     }
     preco = preco + borda[indexBorda].preco
     return preco
+}
+
+function addPizzas(pizza) { 
+    let verificacao = true
+    carrinho.forEach(item => {
+        if(item.sabor == pizza.sabor & item.borda == pizza.borda & item.tamanho == pizza.tamanho) {
+            item.quantidade = parseInt(item.quantidade) + parseInt(pizza.quantidade)
+            verificacao = false 
+        }
+    }) 
+    if(verificacao) {
+        carrinho.push(pizza)
+    }
 }
 
 export function realizarPedido() {

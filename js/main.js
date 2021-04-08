@@ -30,11 +30,7 @@ realizarPedidoBTN.addEventListener("click", (e) => {
 })
 
 function popularSelects(selectSabor, selectTamanho, selectBorda) {
-    const {
-        sabores,
-        tamanho,
-        borda
-    } = pizzas;
+    const { sabores, tamanho, borda } = pizzas;
     for (let index in sabores) {
         let option = document.createElement("option")
         option.setAttribute("value", index)
