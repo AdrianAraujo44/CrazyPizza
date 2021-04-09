@@ -1,4 +1,3 @@
-let validacao = true
 let alerta = document.getElementById("mensagemValidacao")
 
 function exibirMensagem(mensagem = 1) {
@@ -24,31 +23,33 @@ function inputErro(elemento) {
 }
 
 export function validarDados (carrinho,form) {
+    let validacaoCliente = true
+    let validacaoPizza = true
     let campos = form.getElementsByTagName("input")   
     for(let item =0; item < campos.length ; item ++) {
         if(campos[item].value.trim().length == 0) {
             campos[item].style.borderColor = "red"
             exibirMensagem()
             inputErro(campos[item])
-            validacao = false
-        } else {
-            validacao = true
+            validacaoCliente = false
         }
     }
     if(carrinho.length == 0) {
         exibirMensagem("Escolha o sabor de pizza desejado")
-        validacao = false
-    } else {
-        validacao = true
+        validacaoPizza = false
     }
-
-    return validacao
+    if(validacaoCliente == true & validacaoPizza == true) {
+        esconderMensagem()
+        return true
+    }else {
+        return false
+    }
 }
 
 export function verificarQuantidade() {
     let quantidade = document.getElementById("quantidadePizza")
     if(quantidade.value <= 0) {
-        exibirMensagem()
+        exibirMensagem("A quantidade de pizzas não pode ser zero ou nulo")
         quantidade.style.borderColor = "red"
         inputErro(quantidade)
         return false
