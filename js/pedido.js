@@ -1,5 +1,5 @@
 import { pizzas } from "./pizzas.js"
-import {verificarQuantidade} from "./validacao.js"
+import {verificarPizza} from "./validacao.js"
 
 export let carrinho = new Array;
 
@@ -7,21 +7,25 @@ export function addCarrinho() {
     const selectSabor = document.getElementById("saboresPizza")
     const selectTamanho = document.getElementById("tamanhoPizza")
     const selectBorda = document.getElementById("bordaPizza")
-    let quantidade = document.getElementById("quantidadePizza").value
+    let quantidade = document.getElementById("quantidadePizza")
 
     let sabor =  selectSabor.options[selectSabor.selectedIndex].value
     let tamanho =  selectTamanho.options[selectTamanho.selectedIndex].value
     let borda =  selectBorda.options[selectBorda.selectedIndex].value
 
-    if(verificarQuantidade()) {
+    if(verificarPizza()) {
         const pizza = {
             sabor,
             tamanho,
             borda,
-            quantidade,
+            quantidade: quantidade.value,
             preco : calcularPreco(sabor,tamanho,borda)
         } 
-        addPizzas(pizza) 
+        addPizzas(pizza)
+        selectSabor.selectedIndex = 0
+        selectTamanho.selectedIndex = 0
+        selectBorda.selectedIndex = 0
+        quantidade.value = ''
         criarTabela();
     }
 }

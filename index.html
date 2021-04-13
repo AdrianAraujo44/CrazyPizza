@@ -407,7 +407,7 @@
           </div>
           <div class="modal-body">
             <div class="container">
-              <div class="row">
+              <div class="row" id="clienteCampos">
                 <div class="alert alert-danger text-center" id="mensagemValidacao" role="alert"></div>
                 <h2 class="subtitulos-pedidos">Dados Pessoais</h2>
                 <div class="col-12">
@@ -450,13 +450,13 @@
                   </div>
                 </div>
               </div>
-              <div class="row" id="pizza-form">
+              <div class="row" id="pizzaCampos">
                 <h2 class="subtitulos-pedidos">Escolha sua pizza</h2>
                 <div class="col-3">
                   <div class="mb-3">
                     <div class="form-floating">
-                      <select class="form-select selectpicker" data-size="5" id="saboresPizza" aria-label="Floating label select example">
-                        
+                      <select class="form-select"id="saboresPizza" aria-label="Floating label select example">
+                        <option value="" data-default disabled selected></option>
                       </select>
                       <label for="floatingSelect">Sabores</label>
                     </div>
@@ -466,6 +466,7 @@
                   <div class="mb-3">
                     <div class="form-floating">
                       <select class="form-select" id="tamanhoPizza" aria-label="Floating label select example">
+                        <option value="" data-default disabled selected></option>
                       </select>
                       <label for="floatingSelect">Tamanho</label>
                     </div>
@@ -475,6 +476,7 @@
                   <div class="mb-3">
                     <div class="form-floating">
                       <select class="form-select" id="bordaPizza" aria-label="Floating label select example">
+                        <option value="" data-default disabled selected></option>
                       </select>
                       <label for="floatingSelect">Borda</label>
                     </div>

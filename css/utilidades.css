@@ -35,3 +35,7 @@ html,body{
     font-style: italic;
     font-size: 20px;
 }
+
+option {
+    overflow-y: scroll
+}

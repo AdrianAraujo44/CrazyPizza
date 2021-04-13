@@ -1,20 +1,16 @@
 import { pizzas } from "./pizzas.js";
-import { addCarrinho, carrinho, realizarPedido} from "./pedido.js"
+import { addCarrinho, realizarPedido} from "./pedido.js"
 import { validarDados } from "./validacao.js"
 
 let modalPedido = document.getElementById('fazerPedido')
 let addCarrinhoBtn = document.getElementById("addCarrinhoBtn")
 let realizarPedidoBTN = document.getElementById("realizarPedido")
 
-//antes do modal de pedido ser visivel
-modalPedido.addEventListener('shown.bs.modal', (e) => {
-    const selectSabor = document.getElementById("saboresPizza")
-    const selectTamanho = document.getElementById("tamanhoPizza")
-    const selectBorda = document.getElementById("bordaPizza")
-    if (selectSabor.options.length == 0 & selectTamanho.options.length == 0 & selectBorda.options.length == 0) {
-        popularSelects(selectSabor, selectTamanho, selectBorda);
-    }
-})
+const selectSabor = document.getElementById("saboresPizza")
+const selectTamanho = document.getElementById("tamanhoPizza")
+const selectBorda = document.getElementById("bordaPizza")
+
+popularSelects();
 
 //adivionar evento ao botao de addCarinho
 addCarrinhoBtn.addEventListener("click", (e) => {
@@ -23,13 +19,12 @@ addCarrinhoBtn.addEventListener("click", (e) => {
 
 //adivionar evento ao botao de realizarPedido
 realizarPedidoBTN.addEventListener("click", (e) => {
-    let form = document.getElementById("formPedidos");
-    if(validarDados(carrinho,form)) {
+    if(validarDados()) {
         realizarPedido()
     }
 })
 
-function popularSelects(selectSabor, selectTamanho, selectBorda) {
+function popularSelects() {
     const { sabores, tamanho, borda } = pizzas;
     for (let index in sabores) {
         let option = document.createElement("option")
@@ -55,5 +50,4 @@ function popularSelects(selectSabor, selectTamanho, selectBorda) {
         option.appendChild(textoOption)
         selectTamanho.appendChild(option)
     }
-    selectTamanho.selectedIndex = "1"
 }
