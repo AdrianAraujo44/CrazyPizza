@@ -171,6 +171,8 @@ export function realizarPedido() {
     const cep = document.getElementById("cepCliente").value;
     const bairro = document.getElementById("bairroCliente").value;
 
+    const data = new Date()
+
     const pedido = {
         cliente: {
             nome,
@@ -180,8 +182,24 @@ export function realizarPedido() {
             cep,
             bairro
         },
-        pizzas: carrinho
+        pizzas: carrinho,
+        data
+        
     }
     console.log( pedido)
     alert("Pedido Realizado com sucesso")
+}
+
+export function pizzaEscolhida(index,modalPedido) {
+    const selectSabor = document.getElementById("saboresPizza")
+    const selectTamanho = document.getElementById("tamanhoPizza")
+    const selectBorda = document.getElementById("bordaPizza") 
+
+    var modal = new bootstrap.Modal(modalPedido,  {keyboard: true})
+
+    selectSabor.selectedIndex = index + 1
+    selectTamanho.selectedIndex = 2
+    selectBorda.selectedIndex = 1
+
+    modal.show()
 }
