@@ -412,37 +412,37 @@
                 <h2 class="subtitulos-pedidos">Dados Pessoais</h2>
                 <div class="col-12">
                   <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6 col-lg-6 col-md-6">
                       <div class="mb-3">
                         <input type="text" class="form-control" id="nomeCliente" placeholder="Nome" required>
                       </div>
 
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6 col-lg-6 col-md-6">
                       <div class="mb-3">
                         <input type="text" class="form-control" maxlength="10" onkeypress="return apenasNumeros()" onblur="formatarTelefone(this)" id="telefoneCliente" placeholder="Telefone">
                       </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6 col-lg-6 col-md-6">
                       <div class="mb-3">
                         <input type="text" class="form-control" id="enderecoCliente" placeholder="Endereço" required>
                       </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6 col-lg-6 col-md-6">
                       <div class="mb-3">
                         <input type="text" class="form-control" id="numeroCliente" placeholder="Número">
                       </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6 col-lg-6 col-md-6">
                       <div class="mb-3">
                         <input type="text" class="form-control" id="bairroCliente" placeholder="Bairro" required>
                       </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-sm-6 col-lg-6 col-md-6">
                       <div class="mb-3">
                         <input type="text" class="form-control" maxlength="9" onkeypress="return apenasNumeros();" onblur="formatarCEP(this)" id="cepCliente" placeholder="CEP" required>
                       </div>
@@ -452,7 +452,7 @@
               </div>
               <div class="row" id="pizzaCampos">
                 <h2 class="subtitulos-pedidos">Escolha sua pizza</h2>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-lg-3">
                   <div class="mb-3">
                     <div class="form-floating">
                       <select class="form-select"id="saboresPizza" aria-label="Floating label select example">
@@ -462,7 +462,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-lg-3">
                   <div class="mb-3">
                     <div class="form-floating">
                       <select class="form-select" id="tamanhoPizza" aria-label="Floating label select example">
@@ -472,7 +472,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-lg-3">
                   <div class="mb-3">
                     <div class="form-floating">
                       <select class="form-select" id="bordaPizza" aria-label="Floating label select example">
@@ -482,7 +482,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-2">
+                <div class="col-sm-6 col-lg-2">
                   <div class="mb-3">
                     <div class="form-floating">
                       <input type="number" id="quantidadePizza" min="1" class="form-control" id="floatingInputGrid" required>
@@ -493,7 +493,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-1">
+                <div class="col-2 col-sm-2 col-lg-1"> <!--offset-sm-10 offset-md-10 offset-lg-0-->
                   <button type="button"  id="addCarrinhoBtn" class="btn btn-lg btn-danger">
                     <i class="fas fa-cart-plus"></i>
                   </button>
