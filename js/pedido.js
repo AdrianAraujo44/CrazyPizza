@@ -3,6 +3,7 @@ import {verificarPizza} from "./validacao.js"
 
 export let carrinho = new Array;
 
+
 export function addCarrinho() {
     const selectSabor = document.getElementById("saboresPizza")
     const selectTamanho = document.getElementById("tamanhoPizza")
@@ -187,7 +188,9 @@ export function realizarPedido() {
         
     }
     console.log( pedido)
-    alert("Pedido Realizado com sucesso")
+    //alert("Pedido Realizado com sucesso")
+    terminarPedido()
+    carrinho=[]
 }
 
 export function pizzaEscolhida(index,modalPedido) {
@@ -202,4 +205,35 @@ export function pizzaEscolhida(index,modalPedido) {
     selectBorda.selectedIndex = 1
 
     modal.show()
+}
+
+function terminarPedido() {
+    let form = document.getElementById("formPedidos")
+    let inputs = form.getElementsByTagName("input")
+    let selects = form.getElementsByTagName("select")
+    let modalPedido = document.getElementById('fazerPedido')
+
+    modalPedido = bootstrap.Modal.getInstance(modalPedido)
+    let modalTerminarPedido = document.getElementById("modalTerminarPedido")
+    modalTerminarPedido = new bootstrap.Modal(modalTerminarPedido,  {keyboard: true})
+
+    let tabela = document.getElementById("tabela-de-pedidos")
+    let body = document.getElementById("bodytabelaPedidos")
+
+    let precoTotal = document.getElementById("preco-total")
+
+    for(let index = 0; index < inputs.length ; index ++) {
+        inputs[index].value = ""
+    }
+    for(let index = 0; index < selects.length ; index ++) {
+        selects[index].selectedIndex = 0
+    }
+
+    body.innerHTML = ''
+    tabela.style.display = "none";
+
+    precoTotal.innerHTML = ""
+
+    modalPedido.hide()
+    modalTerminarPedido.show()
 }
