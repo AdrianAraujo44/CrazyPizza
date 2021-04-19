@@ -1,8 +1,7 @@
 import { pizzas } from "./pizzas.js"
-import {verificarPizza} from "./validacao.js"
+import { verificarPizza } from "./validacao.js"
 
 export let carrinho = new Array;
-
 
 export function addCarrinho() {
     const selectSabor = document.getElementById("saboresPizza")
@@ -231,7 +230,6 @@ function terminarPedido() {
 
     body.innerHTML = ''
     tabela.style.display = "none";
-
     precoTotal.innerHTML = ""
 
     modalPedido.hide()
