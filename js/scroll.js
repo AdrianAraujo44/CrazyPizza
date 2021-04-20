@@ -5,10 +5,11 @@ export function scrollToIdClick(e) {
     const element = e.target
     const id = element.getAttribute('href')
     const section = document.querySelector(id)
-    
+
     fecharMenu()
     element.classList.add("active")
     window.scroll(0,(section.offsetTop-100))
+    
 }
 
 function removerActive() {

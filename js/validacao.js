@@ -3,6 +3,7 @@ import {carrinho} from "./pedido.js"
 let alerta = document.getElementById("mensagemValidacao")
 let pizzasCampos = document.getElementById("pizzaCampos")
 let clienteCampos = document.getElementById("clienteCampos")
+let modalBodyPedido = document.getElementById("modalBodyPedido")
 
 function exibirMensagem(mensagem = 1) {
     alerta.innerText = ''
@@ -47,6 +48,11 @@ export function validarDados() {
             verificarPizza()
         }
         exibirMensagem()
+        modalBodyPedido.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
         return false
     }
 }
@@ -68,6 +74,11 @@ export function verificarPizza() {
         esconderMensagem()
         return true
     }else {
+        modalBodyPedido.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
         return false
     }
 

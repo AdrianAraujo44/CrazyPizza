@@ -23,7 +23,7 @@
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand"></a>
+      <a class="navbar-brand" id="brand">Crazy<span style="color: red;">Pizza</span></a>
       <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -407,7 +407,7 @@
             <button type="button" style="position: absolute;" class="btn-close mr-auto" data-bs-dismiss="modal"
               aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" id="modalBodyPedido">
             <div class="container">
               <div class="row" id="clienteCampos">
                 <div class="alert alert-danger text-center" id="mensagemValidacao" role="alert"></div>
@@ -540,7 +540,6 @@
         </div>
         <div class="modal-body">
           <p>Em alguns minutos sua pizza chegará em sua casa.</p>
-          <!-- <br> -->
           <p>Obrigado !</p>
         </div>
       </div>
@@ -554,9 +553,6 @@
   <script src="js/menu.js"></script>
   <script src="js/main.js" type="module"></script>
   <script src="js/mascaras.js"></script>
-  <script>
-new WOW().init();
-
-  </script>
+  <script>new WOW().init();</script>
 </body>
 </html>
