@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link href="fontawesome/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="css/banner.css">
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/utilidades.css">
@@ -53,17 +54,19 @@
     <div class="container">
       <div class="row justify-content-end">
         <div class="col-sm-6">
-          <h1 id="tituloBanner" class="d-flex justify-content-center">Crazy <span id="tituloBanner2">Pizza</span></h1>
-          <p id="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia blanditiis, qui
-            necessitatibus repellat assumenda nemo ex doloremque, nam adipisci praesentium quae, obcaecati enim eum
-            debitis esse. Amet laudantium blanditiis quae.</p>
-          <div class="redesSociais d-flex justify-content-center">
-            <a href="#"><span class="iconesSociais"><i class="fab fa-facebook"></i></a>
-            <a href="#"><span class="iconesSociais"><i class="fab fa-instagram"></i></a>
-            <a href="#"><span class="iconesSociais"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><span class="iconesSociais"><i class="fab fa-youtube"></i></a>
-            <a href="#"><span class="iconesSociais"><i class="fab fa-twitter"></i></a>
-          </div>
+          <h1 id="tituloBanner" class="d-flex justify-content-center wow animate__animated animate__fadeInUp" >Crazy <span id="tituloBanner2">Pizza</span></h1>
+          <div class="wow animate__animated animate__fadeIn" data-wow-delay="1s">
+            <p id="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia blanditiis, qui
+              necessitatibus repellat assumenda nemo ex doloremque, nam adipisci praesentium quae, obcaecati enim eum
+              debitis esse. Amet laudantium blanditiis quae.</p>
+            <div class="redesSociais d-flex justify-content-center">
+              <a href="#"><span class="iconesSociais"><i class="fab fa-facebook"></i></a>
+              <a href="#"><span class="iconesSociais"><i class="fab fa-instagram"></i></a>
+              <a href="#"><span class="iconesSociais"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><span class="iconesSociais"><i class="fab fa-youtube"></i></a>
+              <a href="#"><span class="iconesSociais"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div> 
         </div>
       </div>
     </div>
@@ -72,8 +75,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h1 class="titulos text-center" id="tituloQuemSomos">Somos a Crazy Pizza !</h1>
-          <h2 class="subtitulos text-center">"Lorem, ipsum dolor sit amet consectetur adipisicing elit."</h2><br>
+          <h1 class="titulos text-center wow animate__animated animate__fadeInUp" data-wow-delay="1s" id="tituloQuemSomos">Somos a Crazy Pizza !</h1>
+          <h2 class="subtitulos text-center wow animate__animated animate__fadeInUp" data-wow-delay="1s">"Lorem, ipsum dolor sit amet consectetur adipisicing elit."</h2><br>
           <div id="textoQuemSomos">
             <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime rem neque
               suscipit, quaerat unde illum a accusantium facilis corrupti eos magni eius sequi, odit delectus, beatae
@@ -84,7 +87,7 @@
           </div>
         </div>
         <div class="col-md-6" id="imgQuemSomos">
-          <center><img src="img/pizzaiolo.png" alt="" class="img-fluid"></center>
+          <center><img src="img/pizzaiolo.png" alt="" class="img-fluid wow animate__animated animate__fadeInRight "></center>
         </div>
       </div>
     </div>
@@ -97,12 +100,12 @@
     </div>
   </section>
   <section id="cardapio">
-    <h1 class="text-center titulos" id="titulosCardapio">Cardápio</h1>
-    <h2 class="subtitulos text-center" id="subtitulo-cardapio">"Experimente nossas deliciosas pizzas !"</h2><br>
+    <h1 class="text-center titulos wow animate__animated animate__fadeInUp"  id="titulosCardapio">Cardápio</h1>
+    <h2 class="subtitulos text-center wow animate__animated animate__fadeInUp"  id="subtitulo-cardapio">"Experimente nossas deliciosas pizzas !"</h2><br>
     <div class="container">
       <div class="row row-cols-2 row-cols-md-4 g-4">
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated  animate__flipInY">
             <img src="img/pizza-calabresa.png" class="card-img-top" id="1" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title">Calabresa</h5>
@@ -111,7 +114,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated  animate__flipInY">
             <img src="img/pizza-mussarela.png" class="card-img-top" id="2" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title">Mussarela</h5>
@@ -120,7 +123,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated  animate__flipInY">
             <img src="img/pizza-vegetariana.png" class="card-img-top" id="3" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title ">Vegetariana</h5>
@@ -129,7 +132,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated  animate__flipInY">
             <img src="img/pizza-portuguesa.png" class="card-img-top" id="4" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title">Portuguesa</h5>
@@ -138,7 +141,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated  animate__flipInY">
             <img src="img/pizza-frango-catupiry.png" class="card-img-top" id="5" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title">Frango c/ catupiry</h5>
@@ -147,7 +150,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated  animate__flipInY">
             <img src="img/pizza-milho-bacon.png" class="card-img-top" id="6" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title">Milho c/ bacon</h5>
@@ -156,7 +159,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated  animate__flipInY">
             <img src="img/pizza-lombo-catupiry.png" class="card-img-top" id="7" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title">Lombo c/ catupiry</h5>
@@ -165,7 +168,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated  animate__flipInY">
             <img src="img/pizza-cinco-queijos.png" class="card-img-top" id="8" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title">Cinco queijos</h5>
@@ -174,7 +177,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated  animate__flipInY">
             <img src="img/pizza-brigadeiro.png" class="card-img-top" id="9" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title">Brigadeiro</h5>
@@ -183,7 +186,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated  animate__flipInY">
             <img src="img/pizza-chocolate-morango.png" class="card-img-top" id="10" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title">Chocolate c/ morango</h5>
@@ -192,7 +195,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated  animate__flipInY">
             <img src="img/pizza-chocolate-mm.png" class="card-img-top" id="11" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title">Chocolate c/ M&M's</h5>
@@ -201,7 +204,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated  animate__flipInY">
             <img src="img/pizza-chocolate-branco-mm.png" class="card-img-top" id="12" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title">Chocolate branco c/ M&M's</h5>
@@ -221,26 +224,26 @@
   </svg>
 
   <section class="qualidades">
-    <div class="text-center" style=" margin-bottom:90px">
+    <div class="text-center wow animate__animated animate__fadeInUp" style=" margin-bottom:90px">
       <h1 class="titulos">Porque escolher a gente</h1>
       <h2 class="subtitulos">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</h2>
     </div>
     <div class="container">
       <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4">
-        <div class="col">
+        <div class="col  wow animate__animated animate__fadeInUp">
           <i class="qualidade-item fas fa-pizza-slice"></i>
           <h2 class="subtitulos text-center">Sabor Inconfundível</h2>
         </div>
-        <div class="col">
+        <div class="col  wow animate__animated animate__fadeInUp">
           <i class="qualidade-item far fa-clock"></i>
           <h2 class="subtitulos text-center">Feita na Hora</h2>
         </div>
-        <div class="col">
+        <div class="col  wow animate__animated animate__fadeInUp">
           <i class="qualidade-item fas fa-concierge-bell"></i>
           <h2 class="subtitulos text-center">Qualidade garantida</h2>
 
         </div>
-        <div class="col">
+        <div class="col wow animate__animated animate__fadeInUp">
           <i class="qualidade-item fas fa-medal"></i>
           <h2 class="subtitulos text-center">Chefes de primeira</h2>
         </div>
@@ -249,14 +252,14 @@
   </section>
 
   <section id="feedbacks">
-    <div class="text-center" style="margin-top:40px; margin-bottom:50px">
+    <div class="text-center wow animate__animated animate__fadeInUp" style="margin-top:40px; margin-bottom:50px">
       <h1 class="titulos">FeedBacks</h1>
       <h2 class="subtitulos">"Conheça melhor o que alguns dos nossos clientes dizem"</h2>
     </div>
     <div class="container">
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated animate__fadeInUp">
             <div class="card-body">
               <div class="row">
                 <div class="col-3">
@@ -281,7 +284,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated animate__fadeInUp">
             <div class="card-body">
               <div class="row">
                 <div class="col-3">
@@ -305,7 +308,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card wow animate__animated animate__fadeInUp">
             <div class="card-body">
               <div class="row">
                 <div class="col-3">
@@ -336,7 +339,7 @@
   <section id="footer">
     <div class="container-fluid">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3  g-4">
-        <div class="col">
+        <div class="col wow animate__animated animate__fadeInUp">
           <h2 class="titulos-footer text-center">Siga-nos nas redes socias</h2>
           <p id="descricao-siga-nos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. aliquid asperiores vero
             cupiditate quasi nam
@@ -353,7 +356,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col wow animate__animated animate__fadeInUp">
           <h2 class="titulos-footer text-center">Endereço</h2>
           <div class="row justify-content-center">
             <div class="col-md-10 item-icones-endereco">
@@ -368,7 +371,7 @@
             </div>
           </div>
         </div>
-        <div class="col offset-md-3 offset-lg-0">
+        <div class="col offset-md-3 offset-lg-0 wow animate__animated animate__fadeInUp">
           <h2 class="titulos-footer text-center">Receba promoções e novidades</h2>
           <div class="mb-3">
             <div class="form-floating mb-3">
@@ -547,8 +550,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js" integrity="sha512-Rd5Gf5A6chsunOJte+gKWyECMqkG8MgBYD1u80LOOJBfl6ka9CtatRrD4P0P5Q5V/z/ecvOCSYC8tLoWNrCpPg==" crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
   <script src="js/main.js" type="module"></script>
   <script src="js/mascaras.js"></script>
+  <script>
+new WOW().init();
+
+  </script>
 </body>
 </html>
