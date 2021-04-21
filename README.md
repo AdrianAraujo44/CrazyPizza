@@ -11,8 +11,6 @@ O projeto CrazzyPizza é um desafio pessoal de criar uma identidade web para uma
 
 ---
 
-<br>
-
 ### ⚙️ Funcionalidades :
 - [x] FrontEnd
 - [x] Responsividade 
@@ -23,8 +21,6 @@ O projeto CrazzyPizza é um desafio pessoal de criar uma identidade web para uma
 <br>
 
 ---
-
-<br>
 
 ### 🛠 Tecnologias :
 
@@ -42,18 +38,18 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ---
 
-<br>
-
 ### 🎨 Aplicação :
 [](gif/aplicação.gif)
 
-<img src="gif/aplicacao.gif" width="100%" height="100%" />
+<img src="gif/aplicacao.gif" width="100%" height="100%"/>
 
-<br>
+<br><br>
+
+<div align="center">
+  <img src="gif/aplicacaoMobile.gif" width="350px" height="600px"/>
+</div>
 
 ---
-
-<br>
 
 ### 🦸 Autor :
 <p align="center">
